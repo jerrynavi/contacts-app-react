@@ -9,14 +9,14 @@ import { store } from "./redux/store";
 
 // PAGES
 import Home from "./pages/home/Home";
-import { PageHeader } from "antd";
+import Contacts from "./pages/contacts/Contacts";
 
 ReactDOM.render(
     <Provider store={store}>
-        <PageHeader onBack={(): null => null} title="Contacts React App" />
         <Router>
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route path="/contacts" component={Contacts} />
             </Switch>
         </Router>
     </Provider>,
