@@ -1,11 +1,5 @@
-export const state = {
-    contacts: [
-        {
-            name: "",
-            birthday: "",
-            phone: "",
-            email: "",
-            additionalEmails: [""]
-        }
-    ],
+import { State } from "../../interfaces/State";
+
+export const state: State = {
+    contacts: [],
 };
