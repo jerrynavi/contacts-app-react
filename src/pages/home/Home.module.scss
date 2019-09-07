@@ -1,0 +1,15 @@
+.homePage {
+    padding: 4rem 1rem;
+    header {
+        text-align: center;
+    }
+    .contactsList {
+        max-width: 768px; // md breakpoint
+        margin: 1px auto;
+    }
+    .fabSection {
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+    }
+}

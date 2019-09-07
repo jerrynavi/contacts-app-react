@@ -1,5 +1,6 @@
 import React, { Component, SyntheticEvent, ChangeEvent } from "react";
 import { Form, Typography, Input, Row, Col, DatePicker, Button, message } from "antd";
+import { Link } from "react-router-dom";
 
 import styles from "./Contacts.module.scss";
 
@@ -9,11 +10,12 @@ import * as actions from "../../utils/reducerActions";
 import { Contact } from "../../interfaces/Contact";
 import { State } from "../../interfaces/State";
 import { Moment } from "moment";
+import { Action } from "../../interfaces/Action";
 
 const { Item } = Form;
 
 interface ContactProps {
-    dispatch (args: {type: string; payload: any}): void;
+    dispatch (action: Action): void;
     contacts: Contact[];
 }
 
@@ -83,6 +85,11 @@ class Contacts extends Component<ContactProps> {
                                     <Button type="primary" size="large" htmlType="submit" block>
                                         Save
                                     </Button>
+                                    <Link to="/">
+                                        <Button type="default" size="large" block>
+                                            Go back
+                                        </Button>
+                                    </Link>
                                 </Col>
                             </Row>
                         </Form>
@@ -96,7 +103,7 @@ class Contacts extends Component<ContactProps> {
 
 const mapStateToProps = (state: State): {contacts: Contact[]} => {
     return {
-        contacts: state.contacts
+        ...state
     };
 };
 
