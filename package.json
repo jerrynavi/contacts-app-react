@@ -2,6 +2,7 @@
   "name": "contacts-app",
   "version": "0.1.0",
   "author": "Jerry Ejonavi",
+  "homepage": "https://reactful-contacts-app.herokuapp.com/",
   "dependencies": {
     "antd": "^3.23.1",
     "node-sass": "^4.12.0",
