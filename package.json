@@ -24,8 +24,7 @@
     "@types/jest": "24.0.18",
     "@types/node": "12.7.4"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
